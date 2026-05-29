@@ -2,5 +2,8 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "nodeVersion": "18.x"
+  "nodeVersion": "18.x",
+  "env": {
+    "FORCE_BUILD": "true"
+  }
 }
