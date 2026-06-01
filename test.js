@@ -1,17 +1,3 @@
-let endListener = false;
-
-clickElement.addEventListener("click", () => {
-  if (endListener) {
-    endListener = false;
-  } else {
-    endListener = true;
-  }
-});
-
-video.addEventListener("ended", () => {
-  if (endListener) return console.log("listener ended");
-
-  //endListener =false then below code runs
-
-  console.log("Video has ended");
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:110b0e84e74b29db707e4010046dfc05fef572e226ad47fc2bb8f3c91d479e41
+size 344
