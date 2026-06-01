@@ -1,12 +1,10 @@
-import {
-  FaGithub,
-  FaLinkedinIn,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
+
 
 const SocialIcons = () => {
   useEffect(() => {
@@ -22,15 +20,18 @@ const SocialIcons = () => {
       let currentX = 0;
       let currentY = 0;
 
+
       const updatePosition = () => {
-        currentX += (mouseX - currentX) * 0.1;
-        currentY += (mouseY - currentY) * 0.1;
 
-        link.style.setProperty("--siLeft", `${currentX}px`);
-        link.style.setProperty("--siTop", `${currentY}px`);
+          currentX += (mouseX - currentX) * 0.1;
+          currentY += (mouseY - currentY) * 0.1;
 
-        requestAnimationFrame(updatePosition);
-      };
+          link.style.setProperty("--siLeft", `${currentX}px`);
+          link.style.setProperty("--siTop", `${currentY}px`);
+
+          requestAnimationFrame(updatePosition);
+        };
+
 
       const onMouseMove = (e: MouseEvent) => {
         const x = e.clientX - rect.left;
@@ -56,6 +57,7 @@ const SocialIcons = () => {
   }, []);
 
   return (
+
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
